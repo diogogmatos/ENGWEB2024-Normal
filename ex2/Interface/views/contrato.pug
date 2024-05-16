@@ -1,0 +1,37 @@
+extends layout 
+
+block content 
+    div(class="flex flex-col space-y-6 justify-center items-center")
+        h(class="text-xl font-bold text-blue-500") Contrato Nº #{contrato._id}
+        div(class="space-y-2")
+            div 
+                h(class="font-bold text-lg") nAnuncio 
+                p #{contrato.nAnuncio}
+            div
+                h(class="font-bold text-lg") tipoprocedimento
+                p #{contrato.tipoprocedimento}
+            div 
+                h(class="font-bold text-lg") objectoContrato
+                p #{contrato.objectoContrato}
+            div
+                h(class="font-bold text-lg") dataPublicacao
+                p #{contrato.dataPublicacao}
+            div 
+                h(class="font-bold text-lg") dataCelebracaoContrato
+                p #{contrato.dataCelebracaoContrato}
+            div 
+                h(class="font-bold text-lg") precoContratual
+                p #{contrato.precoContratual}
+            div 
+                h(class="font-bold text-lg") prazoExecucao
+                p #{contrato.prazoExecucao}
+            div 
+                h(class="font-bold text-lg") NIPC_entidade_comunicante
+                p #{contrato.NIPC_entidade_comunicante}
+            div 
+                h(class="font-bold text-lg") entidade_comunicante
+                p #{contrato.entidade_comunicante}
+            div 
+                h(class="font-bold text-lg") fundamentacao
+                p #{contrato.fundamentacao}
+        a(class="bg-blue-500 text-white p-2 rounded-md font-bold text-lg" href="/") Voltar

@@ -1,0 +1,24 @@
+extends layout 
+
+block content
+    div(class="flex flex-col space-y-12 justify-center items-center")
+        div(class="flex flex-col space-y-2 justify-center items-center")
+            h(class="text-lg font-bold") Entidade NIPC ##{contratos[0].NIPC_entidade_comunicante}
+            h(class="text-xl font-bold text-blue-500") #{contratos[0].entidade_comunicante}
+        table(class="table-auto")
+            thead
+                th idcontrato
+                th objectoContrato 
+                th dataCelebracaoContrato
+                th precoContratual
+            tbody 
+                each contrato in contratos
+                    tr
+                        td
+                            a(class="w-full m-auto" href="/" + contrato._id) #{contrato._id}
+                        td #{contrato.objectoContrato}
+                        td #{contrato.dataCelebracaoContrato}
+                        td #{contrato.precoContratual}
+        div 
+            h(class="text-blue-500 font-bold text-lg") Somatório do Valor dos Contratos: #{somatorio}€
+        a(class="bg-blue-500 text-white p-2 rounded-md font-bold text-lg" href="/") Voltar
